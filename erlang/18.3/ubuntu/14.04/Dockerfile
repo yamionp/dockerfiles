@@ -1,13 +1,15 @@
 FROM ubuntu:14.04
 
-MAINTAINER Seizan Shimazaki <shimazaki@shiguredo.jp>
+MAINTAINER yamionp <yami@crimsondream.jp>
 
-ENV OTP_VERSION 18.2.1
+ENV OTP_VERSION 18.3
 
 ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update \
   && apt-get install -y \
+         autoconf \
+         git \
          build-essential \
          curl \
          libssl-dev \
